@@ -1,0 +1,207 @@
+PATCH 7:
+ITEMS
+----------------------------
+AETHER LENS:ITEM REWORKED
+OLD:
+Provides: 
++220 Cast Range 
++250 Mana 
++100% Mana Regeneration 
++6% Spell Amp 
+
+NEW:
+Provides: 
++250 Cast Range 
++450 Mana 
++125% Mana Regeneration 
+
+BATTLE FURY:RECIPE CHANGED
+Battle Fury now requires a Demon Edge instead of Claymore + Broadsword (cost is 400 cheaper).
+Attack damage reduced from 55 to 50
+Cleave distance increased from 570 to 625
+Cleave end radius increased from 300 to 330
+
+BLOODSTONE:RECIPE CHANGED
+Bloodstone now requires Perseverance instead of Soul Ring + Recipe.
+Initial charges increased from 12 to 14
+No longer heals in an area around your hero upon death.
+
+DIFFUSAL BLADE:ITEM REWORKED
+No longer dispels
+No longer has charge limits
+No longer upgradeable
+Cooldown increased to 15 seconds
+
+IRON TALON:ITEM REMOVED
+Iron Talon has been removed from the game.
+
+MONKEY KING BAR:ITEM REWORKED
+OLD:
+Requires: 
+Demon Edge (2200) 
+2x Javelin (3000) 
+Total: 5200 
+
+Provides: 
++66 Damage 
++True Strike 
++35% chance to proc 160 magic damage and ministun for 0.01 
+
+NEW:
+Requires: 
+Hyper Stone (2000) 
+2x Javelin (2200) 
+Total: 4200 
+
+Provides: 
++60 Attack Speed 
++75% Accuracy + 60 Pure damage proc (the attack that procs the accuracy also procs the pure damage, pierces Spell Immunity) 
+--------------------------------------------------------------
+HEROES
+--------------------------------------------------------------
+Introduce 2 new heroes : Pangolier and Dark Willow
+
+PANGOLIER : NEW HERO
+SWASHBUCKLE- Pangolier dashes to a new position, assaulting enemies in the target direction with multiple quick thrusts, dealing physical damage and apply on hit effects.
+PANGOLIER ABILITIES
+SHIELD CRASH - Pangolier jumps in the air and slams back to the ground. Enemies around him are damaged and grant him temporary damage reduction the more heroes he hits.
+HEARTPIERCER - Pangolier reads his enemies perfectly, deftly slipping his blade past defenses to give his attacks a chance to slow the target and fully negate enemy armor after a short delay.
+ROLLING THUNDER - Pangolier curls into a magic-immune ball and thunders forward, damaging and stunning any enemies he hits. Shield Crash can also be used while this ability is active to jump over obstacles. Has a brief channeling period.
+
+DARK WILLOW : NEW HERO
+BRAMBLE MAZE - Dark Willow creates a maze of brambles that latch onto enemies who walk into a thicket, damaging them and applying a root.
+SHADOW REALM - Dark Willow recedes into the Shadow Realm, becoming untargetable and gaining increasing bonus magic damage for her next attack the longer she remains in the shadows.
+CURSED CROWN - Dark Willow bestows a cursed fae crown upon an enemy. After a four second delay, the target and any other enemies nearby are stunned.
+BEDLAM - Dark Willow's companion Jex circles around her, dealing damage to nearby enemies. Cannot be used while Terrorize is active.
+TERRORIZE - Dark Willow's companion Jex strikes fear into her enemies, causing them to run towards their home fountain. Cannot be used while Bedlam is active.
+
+TINY:HERO REWORKED
+Base HP regen increased by 1
+Attack point reduced from 0.49 to 0.4
+Avalanche damage rescaled from 100/180/260/300 to 120/180/240/300
+Tiny Agility from 9 + 0.9 to 0 + 0
+Tiny base armor increased from -1 to 0
+Removed Scepter
+Removed Craggy Exterior
+Added a new ability: Tree Grab. Targets a tree to use in attacks for 2/3/4/5 hits. Extends attack range to 350 range. Each hit deals 25% more base damage to units and 75% more base damage to buildings. Splashes 70% damage along the attack path. Affects buildings. Cooldown starts after bonus attacks are used. Cooldown: 40/32/24/16. Mana cost: 20/30/40/50
+Reworked Grow: Grants you 20/30/40% Status Resistance, increases base damage by 40/80/120, movement by 40/50/60, and reduces attack speed by 30.
+Tree Grab gives you a secondary ability when you grab a tree. Lets you throw your tree (resulting in your charges being empty) at a targeted unit, proccing your attack on it and splashing 70% damage onto a 250 area. Cast Range: 1000
+Level 10: +15% Magic Resistance OR +25 Damage
+Level 15: +75 Avalanche Damage OR +350 Health
+Level 20: -10s Tree Grab CD OR Toss Requires No Target
+Level 25: -12s Avalanche Cooldown OR 3 Toss Charges
+
+VIPER:HERO REWORKED
+Base movement speed reduced by 5
+Base armor reduced by 1
+Corrosive Skin no longer slows movement speed.
+Corrosive Skin damage increased from 10/15/20/25 to 8/16/24/32
+Corrosive Skin Attack Slow rescaled from 10/15/20/25 to 8/16/24/32
+Reworked Poison Attack. Slows the target and deals damage based on how much health the target is missing.
+MS/AS Slow: 25/30/35/40%
+DPS: 0.25/0.5/0.75/1.0x * Missing Health percentage (so at max level 50% missing health would be 50 DPS, 90% missing health would be 90 DPS)
+Duration: 3
+CD: 6/4/2/0
+Mana cost: 40/35/30/25
+Reworked Nethertoxin. Releases poison onto the targeted area. Deals damage over time, reduces magic resistance and applies Break (disabling passive abilities) to those standing in that area.
+AoE: 300
+DPS: 20/30/40/50
+Magic Resistance: -10/15/20/25% + Applies Break
+Duration: 8
+Cooldown: 5
+Mana cost: 75
+Cast Range: 900 (2000 projectile speed)
+Note: This affects the area targeted on the ground, does not leave a debuff on enemies upon cast. Only active as long as they are in the area.
+Level 10: +20 Attack Speed OR +8% Spell Lifesteal
+Level 15: +100 Attack Range OR +6 Corrosive Skin
+Level 20: Poison Attack Affects Buildings OR +100 Viper Strike DPS
+Level 25: +120 Damage OR Nethertoxin Silences
+
+WRAITH KING:HERO REWORKED
+Strength gain reduced from 3.2 to 2.8
+Reworked Mortal Strike:
+Mortal Strike hero chance rescaled from 15% to 9/11/13/15% (same as creep chance)
+Mortal Strike hero crit rescaled from 150/200/250/300 to 300%
+Reworked Mortal Strike vs creeps. Grants a 9/11/13/15% chance to kill a non-player non-ancient unit in one hit and gain a charge counter.
+Can cast mortal strike to summon skeletons equal to the number of charges you have (max of 4/5/6/7 charges). Skeletons are not bound to you and will auto attack targets they find.
+Activation requires 75 mana and has a 50 second cooldown. Skeletons have 35-40 Damage, 1.2 attack rate, 350 MS, 350 Health. Grant 15 Gold/XP Bounty.
+Skeletons are summoned once per 0.25 seconds (first is immediate).
+Note: If you have Vampiric, you lifesteal as if your attack dealt enough damage to kill the creep.
+Casting Hellfire Blast on a target will order all skeletons to attack that target.
+Level 10: +40 Wraithfire Blast DPS OR +20 Attack Speed
+Level 15: +5 Max Skeletons OR +15 Strength
+Level 20: No Reincarnation Mana cost OR +30 Skeletons Attack Damage
+Level 25: +25% Vampiric Aura Lifesteal OR Reincarnation Casts Wraithfire Blasts
+
+NECROPHOS:
+Ghost Shroud slow reduced from 12/20/28/36 to 6/12/18/24
+Ghost Shroud bonus magic damage taken increased from 25% to 30%
+Heartstopper Aura range reduced from 900 to 700
+Heartstopper Aura rescaled from 0.6/1.0/1.4/1.8 to 0.5/1.0/1.5/2.0
+Reaper's Scythe cooldown increased from 100 to 120
+Reaper's Scythe mana cost from 175/340/500 to 200/350/500
+Level 10: +10 Strength OR +40 Damage
+Level 15: +30 Movement Speed OR +300 Health
+Level 20: +20% Magic Resistance OR +80 Attack Speed
+Level 25: -1.5s Death Pulse Cooldown OR +0.6 Heartstopper Aura
+
+MORPHLING:HERO REWORKED
+Reduced base Intelligence from 17 to 13
+Renamed Morph to Attribute Shift
+Attribute Shift rate rescaled from 2/4/8/16 to 1/4/10/25
+Attribute Shift now costs no mana.
+Adaptive Strike is now two abilities, one that deals damage based on Agility and one that stuns/knocks back based on Strength. When one is cast, the other goes into cooldown for 3 seconds.
+Adaptive Strike (Strength) stun duration rescaled from 1.25/2.25/3.25/4.25 to 1.5/2/2.5/3.0
+Adaptive Strike (Strength) knockback increased from max 300 to 500
+Removed Morphling's Scepter
+Replaced Replicate with a new ultimate: Morph. Changes your hero to match the target enemy. Copies the target's visual model, basic abilities, base movement speed, attack range, and attributes. Applies a soft dispel on transformation. If you die during this, Morphling dies. You can exit the morphed form anytime. Lasts 30 seconds. CD: 160/100/40. Cast Range: 600. Mana cost: 75/100/125.
+Level 10: +10 Agility OR +20 Movement Speed
+Level 15: Waveform Attacks Targets OR +30 Attack Speed
+Level 20: -25s Morph Cooldown OR Morph Targets Allies
+Level 25: +800 Waveform Range OR +2 Multishot Adaptive Strike
+
+BROODMOTHER:HERO REWORKED
+Spin Web no longer grants invisibility
+Spin Web pathing/speed buff is no longer removed when taking damage
+Movement speed reduced from 290 to 270
+Spiderling HP reduced from 450 to 250
+Spiderlite HP reduced from 175 to 100
+Spiders now have 50% magic resistance.
+Spiders armor increased by 8
+Spiders HP regen increased from 0.5 to 2
+Spin Web charges increased from 1/2/3/4 to 2/4/6/8 (matches amount you can place)
+Level 10: +60 Spawn Spiderling Damage OR +200 Health
+Level 15: +35% XP Gain OR +20% Cooldown Reduction
+Level 20: +60 Attack Speed OR +20 Spiders Attack Damage
+Level 25: +75 Insatiable Hunger Damage/Lifesteal OR +350 Spiders Health
+
+BEASTMASTER:HERO REWORKED
+Wild Axes reworked:
+Wild Axes spread distance (how far the axes are from each other at mid distance) increased from 353 to 450
+Wild Axes hit radius increased from 140 to 175
+Wild Axes mana cost reduced from 105/110/115/120 to 60/65/70/75
+Wild Axes damage reduced from 70/100/130/160 to 40/70/100/130
+Wild Axes cooldown reduced from 13 to 8
+Wild Axes now places a stacking debuff on affected units. Amplifies all damage the target takes from Beastmaster or his units by 6/8/10/12% for each axe hit. Debuff lasts 10 seconds.
+Primal Roar now causes Beastmaster and all his units to gain 30% movement speed for 3 seconds.
+Reworked Call of the Wild. It is now a single ability.
+Beasts last 60 seconds. Cooldown: 60, Mana cost: 50/60/70/80
+Level 1: Boar Level 1
+Level 2: Boar Level 2
+Level 3: Boar Level 3 + Hawk
+Level 4: Boar Level 4 + Hawk + Random Neutral
+Boar HP: 275/350/425/500
+Boar Attack Damage: 20/30/40/50 (rescaled from 10/25/40/55)
+Boar Slow: 10/20/30/40%
+Boar Slow Duration: 3
+Hawk no longer becomes invisible.
+Hawk HP: 350 (increased from 40/60/80/100)
+Hawk Armor: 5
+Hawk Speed: 450
+Hawk Night Sight: 1000
+Hawk Day Sight: 1000
+Neutral: Will select a random neutral from the following list (Alpha Wolf, Hellbear Smasher, Satyr Tormenter, Centaur Conqueror, Dark Troll Summoner)
+Level 10: +30 Movement Speed OR +25% XP Gain
+Level 15: +40 Boar Damage OR +7 Armor
+Level 20: +500 Health OR +120 Wild Axes Damage
+Level 25: +2 Hawks OR +40 Inner Beast Attack Speed

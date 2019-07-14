@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snakes and Ladders by Muhamad Arif Lutfi</title>
+
+    <style media="screen">
+
+      div#start
+      {
+        align-content: center;
+        text-align: center;
+
+      }
+      #demo
+      {
+        text-align: center;
+      }
+    </style>
+
+  </head>
+  <body>
+<div id="start">
+  <button onclick="startGame()">Click to Start</button>
+</div>
+
+
+<p id="demo">The game will start and finish after clicking the above button.</p>
+
+    <script type="text/javascript">
+  function startGame()
+  {
+    var Player1Pos=0;
+    var temp1;
+    var Player2Pos=0;
+    var temp2;
+    var dieValue;// = Math.floor((Math.random()*6)+1);
+    var msg;
+
+    do {
+
+      document.write("<br>");
+      dieValue=Math.floor((Math.random()*6)+1);
+      document.write("Player 1 Rolls the die. Die: "+dieValue);
+      temp1=Player1Pos;
+      Player1Pos=Player1Pos+dieValue;
+      document.write(" - Action: Player 1 moves from position "+temp1+" to position "+Player1Pos);
+      document.write("<br>");
+      if (Player1Pos >=25)
+      {
+        break;
+      }
+      else if (Player1Pos == 15)
+      {
+        document.write(" - Eaten by a snake! Player 1 moves from position "+Player1Pos+" to position 5");
+        document.write("<br>");
+        Player1Pos = 5;
+      }
+      else if (Player1Pos == 23)
+      {
+        document.write(" - Eaten by a snake! Player 1 moves from position "+Player1Pos+" to position 13");
+        document.write("<br>");
+        Player1Pos = 13;
+      }
+      else if (Player1Pos == 2)
+      {
+        document.write(" - Found a ladder! Player 1 moves from position "+Player1Pos+" to position 12");
+        document.write("<br>");
+        Player1Pos = 12;
+      }
+      else if (Player1Pos == 10)
+      {
+        document.write(" - Found a ladder! Player 1 moves from position "+Player1Pos+" to position 20");
+        document.write("<br>");
+        Player1Pos = 20;
+      }
+
+      dieValue=Math.floor((Math.random()*6)+1);
+      document.write("Player 2 Rolls the die. Die: "+dieValue);
+      temp2=Player2Pos;
+      Player2Pos=Player2Pos+dieValue;
+      document.write(" - Action: Player 2 moves from position "+temp2+" to position "+Player2Pos);
+      document.write("<br>");
+      if (Player2Pos >= 25)
+      {
+        break;
+      }
+      else if (Player2Pos == 15)
+      {
+        document.write(" - Eaten by a snake! Player 2 moves from position "+Player2Pos+" to position 5");
+        document.write("<br>");
+        Player2Pos = 5;
+      }
+      else if (Player2Pos == 23)
+      {
+        document.write(" - Eaten by a snake! Player 2 moves from position "+Player2Pos+" to position 13");
+        document.write("<br>");
+        Player2Pos = 13;
+      }
+      else if (Player2Pos == 2)
+      {
+        document.write(" - Found a ladder! Player 2 moves from position "+Player2Pos+" to position 12");
+        document.write("<br>");
+        Player2Pos = 12;
+      }
+      else if (Player2Pos == 10)
+      {
+        document.write(" - Found a ladder! Player 2 moves from position "+Player2Pos+" to position 20");
+        document.write("<br>");
+        Player2Pos = 20;
+      }
+
+    } while (Player1Pos<=25 || Player2Pos <=25);
+
+    if (Player1Pos>=25){
+      document.write("<br>");
+      document.write("Player 1 wins the game!")
+    }
+    else if(Player2Pos>=25){
+      document.write("<br>");
+      document.write("Player 2 wins the game!")
+    }
+  }
+    </script>
+
+  </body>
+</html>

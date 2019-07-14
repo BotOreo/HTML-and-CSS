@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment  Lab 3</title>
+    <style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+div #zipdiv, #citydiv, #statediv, #longitudediv, #latitudediv
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+  var value;
+  $(function()
+{
+
+  $(document).ready( function()
+  {
+    $("#citydiv").hide();
+    $("#statediv").hide();
+    $("#longitudediv").hide();
+    $("#latitudediv").hide();
+    $("#mapdiv").hide();
+
+
+  });
+
+  // OnKeyDown Function
+  $("#zcode").keyup(function()
+  {
+    var zip_in = $(this);//this refer kepada text input zcode
+    var zip_box = $('#zipdiv');
+
+    if (zip_in.val().length<5)
+    {
+      zip_box.removeClass('error success');
+    }
+    else if ( zip_in.val().length>5)
+    {
+      zip_box.addClass('error').removeClass('success');
+    }
+    else if ((zip_in.val().length == 5) )
+    {
+
+      // Make HTTP Request
+      $.ajax({
+        url: "http://api.zippopotam.us/MY/" + zip_in.val(),
+        cache: false,
+        dataType: "json",
+        type: "GET",
+
+        success: function(result, success)
+        {
+
+          // Make the city and state boxes visible
+          $('#citydiv').slideDown(200);
+          $('#statediv').slideDown(200);
+          $('#longitudediv').slideDown(200);
+          $('#latitudediv').slideDown(200);
+
+
+          // Malaysia Zip Code Records Officially Map to only 1 Primary Location
+          places = result['places'][0];
+          $("#city").val(places['place name']);
+          $("#state").val(places['state']);
+          $("#long").val(places['longitude']);
+          $("#lat").val(places['latitude']);
+          zip_box.addClass('success').removeClass('error');
+        },
+
+        error: function(result, success) {
+          zip_box.removeClass('success').addClass('error');
+        }
+      });
+
+    }
+});
+
+});
+
+function mapFunction() {
+
+var mapOptions =
+{
+                           // Set up the map options
+
+  center: new google.maps.LatLng(places['latitude'],places['longitude']),
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  zoom: 13,
+};
+var venueMap;                                      // Map() draws a map
+venueMap = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function loadScript()
+{
+var script = document.createElement('script');     // Create <script> element
+script.src = 'http://maps.googleapis.com/maps/api/js?sensor=false&callback=mapFunction';
+document.body.appendChild(script);                 // Add element to page
+}
+
+window.onload = loadScript;                          // on load call loadScript()
+
+$(document).ready(function()
+{
+  $(".button").click(function()
+  {
+    $("#mapdiv").show(200, function()
+    {
+      mapFunction();//re-initialized the mapFunction so the value from JSON and Ajax request can populate the code
+    });
+
+  });
+});
+
+
+</script>
+
+  </head>
+  <body>
+
+    <h3>Enter Malaysian Zip Code</h3>
+
+
+
+<div>
+  <form action="#" method="post" class="form fancy-form">
+    <div id="zipdiv">
+      <label for="zip">Zip Code</label>
+      <input type="text" id="zcode" name="Zip code" placeholder="E.g : 48050">
+    </div>
+
+    <div id="citydiv">
+      <label id="city_lbl" for="city">City</label>
+      <input type="text" id="city" name="city">
+  </div>
+
+    <div id="statediv">
+      <label id="state_lbl" for="state">State</label>
+      <input type="text" id="state" name="state">
+    </div>
+
+    <div id="longitudediv">
+      <label id="lgtd_lbl" for="longitude">Longitude</label>
+      <input type="text" id="long" name="longitude">
+    </div>
+
+    <div id="latitudediv">
+      <label id="lttd_lbl" for="latitude">Latitude</label>
+      <input type="text" id="lat" name="latitude">
+    </div>
+
+    <button id="button" class="button" type="button" name="button">Submit</button>
+    <div id="mapdiv">Map here: <div id="map" style="width:400px;height:400px;"></div></div>
+
+
+</form>
+
+
+</div>
+  </body>
+</html>

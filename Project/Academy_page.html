@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dota 2 Academy</title>
+
+		<style type="text/css">
+		  header, section, footer, aside, nav, article, figure, figcaption {
+		    display: block;}
+		  body
+        {
+		      background: url("img_pr/background_dota_lina_morph.jpg")no-repeat center center fixed #000;
+		      background-repeat: no-repeat; /*this line keeps the image from being repeated*/
+					font-family: "Lucida Sans Unicode";
+          -webkit-background-size: cover;
+					-moz-background-size: cover;
+					-o-background-size: cover;background-size: cover;
+		    }
+		  .wrapper {
+		    width: 940px;
+		    margin: 100px auto 200px auto;
+		    border: 2px solid #000000;
+		    background-color: #353434;
+				}
+				#logo
+				{
+					margin-left: 0px;
+					margin-right: 10px;
+				}
+				 h1
+				 {
+		    	text-indent: -9999px;
+		    	width: 940px;
+		    	height: 130px;
+		    	margin: 0px;
+					}
+		  footer
+			{
+		    clear: both;
+		    color: #3f8aff;
+		    background-color: ;
+		    height: 50px;
+				text-align:left;
+				background: linear-gradient(to bottom, #0c2f68 0%, black 100%);
+
+			}
+				nav
+				{
+					clear: both;
+			    height: 50px;
+					text-align: center;
+					background: linear-gradient(to bottom, black 0%, #0c2f68 100%);
+				}
+		  nav ul
+			{
+		    margin: 0px;
+		    padding: 0px 0px 0px 0px;
+			}
+		  nav li {
+		    display: inline;
+		    margin-right: 20px;
+				padding: 15px 15px 15px 15px;
+			}
+		  nav li a
+			{
+		    color: #3f8aff;
+			}
+		  nav li a:hover, nav li a.current
+      {
+		    color: #3f8aff;
+      }
+				#menu1:hover
+				{
+					background: #353434;
+					padding: 15px 15px 15px 15px;
+
+				}
+				#menu2:hover
+				{
+					background: #353434;
+					padding: 15px 15px 15px 15px;
+
+				}
+				#menu3:hover
+				{
+					background: #353434;
+					padding: 15px 15px 15px 15px;
+
+				}
+				#menu4:hover
+				{
+					background: #353434;
+					padding: 15px 15px 15px 15px;
+
+				}
+				#menu5:hover
+				{
+					background: #353434;
+					padding: 15px 15px 15px 15px;
+				}
+
+		  section.courses
+			{
+		    float: left;
+		    width: 659px;
+		    border-right: 1px solid #eeeeee;
+			}
+		  article
+			{
+		    clear: both;
+		    overflow: auto;
+		    width: 100%;
+			}
+		  hgroup
+			{
+		    margin-top: 40px;
+			}
+		  figure {
+		    float: left;
+		    width: 290px;
+		    height: 220px;
+		    padding: 5px;
+		    margin: 20px;
+		    border: 1px solid #eeeeee;}
+		  figcaption {
+		    font-size: 90%;
+		    text-align: left;}
+		  aside {
+		    width: 230px;
+		    float: none;
+		    padding: 0px 0px 0px 20px;}
+		  aside section a {
+		    display: block;
+		    padding: 10px;
+		    border-bottom: 1px solid #eeeeee;}
+		  aside section a:hover {
+		    color: #985d6a;
+		    background-color: #efefef;}
+		  a {
+		    color: #de6581;
+		    text-decoration: none;}
+		  h1, h2, h3 {
+		    font-weight: normal;}
+		  h2 {
+		    margin: 10px 0px 5px 0px;
+		    padding: 0px;}
+		  h3 {
+		    margin: 0px 0px 10px 0px;
+		    color: #de6581;}
+		  aside h2 {
+		    padding: 30px 0px 10px 0px;
+		    color: #de6581;}
+		  footer {
+		    font-size: 80%;
+		    padding: 7px 0px 0px 20px;}
+
+				#ico
+				{
+					float: right;
+					margin: auto 13px auto 10px;
+				}
+
+        .academy
+        {
+          text-align: center;
+          font-size: 12px;
+          color: white;
+        }
+        .academy-section1
+        {
+          float: left;
+          width: 312px;
+          height: 610px;
+          margin: 10px 5px 10px 5px;
+        }
+        .academy-section2
+        {
+          float: left;
+          width: 610px;
+          height: 610px;
+          margin: 10px 0px 10px 0px;
+        }
+        table
+        {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          background: white;
+          color: black;
+
+        }
+    td,th
+      {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+      }
+      #target_group
+      {
+        font-family: arial, sans-serif;
+        text-align: left;
+      }
+      .courses
+      {
+        background-color: #353434;
+      }
+</style>
+<script>
+
+function mapFunction()
+{
+
+      var myCenter = new google.maps.LatLng(3.2025,101.7169);
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {center: myCenter, zoom: 15};
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myCenter});
+    marker.setMap(map);
+
+}
+function loadScript()
+{
+var script = document.createElement('script');     // Create <script> element
+script.src = 'http://maps.googleapis.com/maps/api/js?sensor=false&callback=mapFunction';
+document.body.appendChild(script);                 // Add element to page
+}
+
+window.onload = loadScript;                          // on load call loadScript()
+</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<nav>
+					<ul>
+						<li id="logo"><a href="Main_page.html"><img src="img_pr/logo_2.jpg" height=35px id="logo"></a></li>
+						<li id="menu1"><a href="Academy_page.html">ACADEMY</a></li>
+						<li id="menu2"><a href="">HEROPEDIA</a></li>
+						<li id="menu3"><a href="">UPDATES</a></li>
+						<li id="menu4"><a href="">TOURNAMENT</a></li>
+						<li id="menu5"><a href="">TOP MMR</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="courses">
+				<section class="academy">
+
+          <!-- Section 1 -->
+				  <section class="academy-section1">
+            <fieldset>
+            <legend>It's An Academy !</legend>
+            We put an emphasis on teaching and learning, but at the end of the
+            day have fun! The Discord is over 200 members and growing fast!
+            A community, where you can chat freely and get questions answered,
+            yet also go into a session for more in depth help and detailed analysis,
+            and can choose the extent you want it. You can get coaching that is free, or
+            go more premium with paid coaching. <br><br>
+            We will also host Symposiums, or Forums if you will, hosted by our coaches, for all players to
+            join in and listen to our coaches speak about a variety of topics. Additionally,
+            we will have demonstrations of various techniques, and we will organize
+            inhouses hosted by our coaches where coaches can provide feedback, and just play
+            to have fun while practicing communication and working with players in a team
+            environment.<br><br>
+
+            Our location: <br>
+          <div id="map" style="width:297px;height:189px;"></div>
+        </fieldset>
+				  </section>
+
+          <!-- Section 2 -->
+          <section class="academy-section2">
+            <fieldset>
+            <legend>Join the Dota 2 Academy!</legend>
+            <ul id="target_group">
+              <li>New and want to improve</li>
+              <li>Looking for a coach for yourself or for your team</li>
+              <li>Looking forward to build a team</li>
+              <li>Interested in professional team coaching</li>
+            </ul>
+            If you want more information, contact us through Facebook, Twitter google or on the server itself. You can also speak to admin or moderator for questions!
+            <br> <br>
+          <table id="target_market">
+            <tr id="row1">
+              <th>BEGINNER</th>
+              <th>INTERMEDIATE</th>
+              <th>ADVANCED</th>
+            </tr>
+            <tr id="row2">
+              <td> < 4000 MMR </td>
+              <td> 4000 - 5000 MMR </td>
+              <td>> 5000 MMR</td>
+            </tr>
+            <tr id="row3">
+              <td rowspan="4"></td>
+              <td>Has previous tournament experience</td>
+              <td>Good in analysing replay</td>
+            </tr>
+            <tr id="row4">
+              <td>Willing to analyse gameplay</td>
+              <td rowspan="2">Interested in pro league tournament</td>
+            </tr>
+            <tr id="row5">
+              <td>Willing to enter tournament</td>
+            </tr>
+            <tr id="row6">
+              <td>Pass beginner level</td>
+              <td>Pass intermediate level</td>
+            </tr>
+
+          </table>
+          <br>
+          Course Fees : <br>
+          <table id="price_package">
+            <tr id="row1">
+              <th>FEES</th>
+              <th>PUBLIC</th>
+              <th>SECONDRARY SCHOOL STUDENTS</th>
+            </tr>
+            <tr id="row2">
+              <td>1-Time Enrollment</td>
+              <td>RM 90.00</td>
+              <td>RM 50.00</td>
+            </tr>
+            <tr id="row3">
+              <td>Beginner Level</td>
+              <td colspan="2">RM 780.00</td>
+            </tr>
+            <tr id="row4">
+              <td>Intermediate Level</td>
+              <td colspan="2">RM870.00</td>
+            </tr>
+            <tr id="row5">
+              <td>Advanced Level </td>
+              <td colspan="2">RM990.00</td>
+            </tr>
+          </table>
+          <br><br>
+        </fieldset>
+          </section>
+				</section>
+
+			</div>
+			<footer>
+				CONTACT US : 012-345 6789
+
+				<a href="http://twitter.com/"> <img id="ico" src="img_pr/twitter_ico.png" width="25px" height="27px"></a> <a href="http://facebook.com/"><img id="ico" src="img_pr/FB_ico_1.png" width="25px" height="27px"></a> <a href="https://mail.google.com/mail/u/0/#inbox"><img id="ico" src="img_pr/email.png" width="28px" height="25px"></a>
+			</footer>
+		</div><!-- .wrapper -->
+	</body>
+</html>

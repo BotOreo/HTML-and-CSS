@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="roll">
+    </div>
+
+    <script type="text/javascript">
+    var position1 = 0;
+    var position2 = 0;
+    var msg='';
+    var die = Math.floor((Math.random()*6)+1);
+    msg = "Roll " + die;
+    document.getElementById('roll').innerHTML=msg;
+
+    position1=position1+die;
+    msg1 = "Moved to position " + position1;
+    document.getElementById('roll').innerHTML=msg1;
+
+
+    </script>
+
+  </body>
+</html>
